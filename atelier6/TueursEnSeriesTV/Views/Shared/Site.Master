@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<!DOCTYPE html>
+<html>
+    <head runat="server">
+        <meta charset="utf-8">
+        <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+        <link href="../../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+          body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+          }
+        </style>
+        <link href="../../Content/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="../assets/js/html5shiv.js"></script>
+        <![endif]-->    
+    </head>
+
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="container">
+              <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <%: Html.ActionLink("TueursEnSeriesTV", "Index", new { controller = "Home" }, new { @class = "brand" })%>
+              <div class="nav-collapse collapse">
+                <ul class="nav">
+                  <li><%: Html.ActionLink("Contact", "About", "Home")%></li>
+                </ul>
+              </div>
+              <% using (Html.BeginForm("Search", "Series", FormMethod.Get, new { @class = "navbar-search pull-right" }))
+                 { %>
+                <input type="text" name='q' class="search-query" placeholder="Recherche" onchange="this.form.submit()">
+              <% } %>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+          <hr/>
+          <footer>
+            <p>&copy; S.Labasse 2013</p>
+          </footer>
+        </div>
+        <script type="text/javascript" src="../../Scripts/jquery-1.9.1.min.js" ></script>
+        <script type="text/javascript" src="../../Scripts/bootstrap.js" ></script>
+        <asp:ContentPlaceHolder ID="ScriptContent" runat="server" />
+    </body>
+</html>

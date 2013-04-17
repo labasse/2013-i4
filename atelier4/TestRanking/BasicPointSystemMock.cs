@@ -1,6 +1,6 @@
 ﻿using SoccerRankingLib;
 
-namespace TpSoccerRanking
+namespace TestRanking
 {
     public class BasicPointSystemMock : PointSystem
     {

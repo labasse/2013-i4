@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloBot", "HelloBot\HelloBot.csproj", "{691C40EC-0C80-4CC3-8148-872F58806169}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloBot2", "HelloBot2\HelloBot2.csproj", "{373EA3F7-CCA1-432D-B748-06E508E5F9FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Démo|x86 = Démo|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{691C40EC-0C80-4CC3-8148-872F58806169}.Debug|x86.ActiveCfg = Debug|x86
+		{691C40EC-0C80-4CC3-8148-872F58806169}.Démo|x86.ActiveCfg = Démo|x86
+		{691C40EC-0C80-4CC3-8148-872F58806169}.Démo|x86.Build.0 = Démo|x86
+		{691C40EC-0C80-4CC3-8148-872F58806169}.Release|x86.ActiveCfg = Release|x86
+		{691C40EC-0C80-4CC3-8148-872F58806169}.Release|x86.Build.0 = Release|x86
+		{373EA3F7-CCA1-432D-B748-06E508E5F9FE}.Debug|x86.ActiveCfg = Debug|x86
+		{373EA3F7-CCA1-432D-B748-06E508E5F9FE}.Debug|x86.Build.0 = Debug|x86
+		{373EA3F7-CCA1-432D-B748-06E508E5F9FE}.Démo|x86.ActiveCfg = Démo|x86
+		{373EA3F7-CCA1-432D-B748-06E508E5F9FE}.Démo|x86.Build.0 = Démo|x86
+		{373EA3F7-CCA1-432D-B748-06E508E5F9FE}.Release|x86.ActiveCfg = Release|x86
+		{373EA3F7-CCA1-432D-B748-06E508E5F9FE}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
