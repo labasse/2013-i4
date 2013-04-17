@@ -75,12 +75,9 @@ namespace WpfFrenchChampionship.ViewModel
         
         public ICommand ValidateCommand
         {
-            get 
-            {
-                return new BasicCommand(delegate(object parameter) { 
-                    // TODO : instanciate match and register it to ranking
-                });
-            }
+            get { return new BasicCommand(delegate(object parameter) { 
+                this._ranking.Register(new Match(_home, _away, _hgoals, _agoals));
+            }); }
         }
     }
 }

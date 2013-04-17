@@ -52,11 +52,19 @@ namespace SoccerRankingLib
                     return entry;
             return null;
         }
+        public class MatchRegistrationEventArgs : EventArgs
+        {
+            public Match NewMatch;
+        }
+        public event EventHandler<MatchRegistrationEventArgs> NewMatchRegistered;
+
         public void Register(Match m)
         {
             EntryFromClub(m.Home).Points.Increment(system.GetPointsFromMatch(m, true));
             EntryFromClub(m.Away).Points.Increment(system.GetPointsFromMatch(m, false));
             Array.Sort(entries);
+            if (NewMatchRegistered != null)
+                NewMatchRegistered(this, new MatchRegistrationEventArgs() { NewMatch = m });
         }
         public Club GetClub(int index)
         {

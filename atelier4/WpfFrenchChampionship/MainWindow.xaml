@@ -12,8 +12,9 @@
         <DockPanel LastChildFill="True">
             <Label DockPanel.Dock="Top" HorizontalAlignment="Center">Matchs</Label>
             <my:MatchEditView DockPanel.Dock="Top" x:Name="matchEditView"/>
-            <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">TODO : Mettre la vue  MatchListView à la place de ce label</Label>
+            <my:MatchListView x:Name="matchListView"/>
         </DockPanel>
-        <my:RankingView Grid.Column="1" x:Name="rankingView"/>
+        <GridSplitter Width="2" />
+        <my:RankingView Grid.Column="2" x:Name="rankingView"/>
     </Grid>
 </Window>

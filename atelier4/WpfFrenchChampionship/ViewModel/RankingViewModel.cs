@@ -21,6 +21,15 @@ namespace WpfFrenchChampionship.ViewModel
         public RankingViewModel(Ranking ranking)
         {
             this._ranking = ranking;
+            ranking.NewMatchRegistered += new EventHandler<Ranking.MatchRegistrationEventArgs>(ranking_NewMatchRegistered);
+        }
+
+        private void ranking_NewMatchRegistered(object sender, Ranking.MatchRegistrationEventArgs e)
+        {
+            
+            RaisePropertyChanged("RankedClubs");
+            /*if(CollectionChanged!=null)
+                CollectionChanged(this, new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Reset));*/
         }
 
         public IEnumerable<RankedClub> RankedClubs
@@ -36,5 +45,7 @@ namespace WpfFrenchChampionship.ViewModel
                     };
             }
         }
+
+        //public event NotifyCollectionChangedEventHandler CollectionChanged;
     }
 }

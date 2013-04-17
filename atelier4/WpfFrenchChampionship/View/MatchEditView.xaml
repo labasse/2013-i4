@@ -18,8 +18,8 @@
         <ComboBox  Style="{StaticResource ctrlSpace}" ItemsSource="{Binding ClubList}" SelectedItem="{Binding SelectedHome}"/>
         <TextBox   Style="{StaticResource ctrlSpace}" Grid.Column="1"  Text="{Binding HomeGoals}"></TextBox>
         <Label     Style="{StaticResource ctrlSpace}" Grid.Column="2" >-</Label>
-        <TextBox   Style="{StaticResource ctrlSpace}" Grid.Column="3"></TextBox>
-        <ComboBox  Style="{StaticResource ctrlSpace}" Grid.Column="4"/>
-        <Button    Style="{StaticResource ctrlSpace}" Grid.Column="5">Ajouter</Button>
+        <TextBox   Style="{StaticResource ctrlSpace}" Grid.Column="3"  Text="{Binding AwayGoals}"></TextBox>
+        <ComboBox  Style="{StaticResource ctrlSpace}" Grid.Column="4"  ItemsSource="{Binding ClubList}" SelectedItem="{Binding SelectedAway}"/>
+        <Button    Style="{StaticResource ctrlSpace}" Grid.Column="5" Command="{Binding ValidateCommand}">Ajouter</Button>
     </Grid>
 </UserControl>

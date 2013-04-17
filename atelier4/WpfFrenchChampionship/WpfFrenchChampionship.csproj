@@ -56,6 +56,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModel\MatchViewModel.cs" />
+    <Compile Include="ViewModel\MatchListViewModel.cs" />
     <Compile Include="ViewModel\RankingViewModel.cs" />
     <Compile Include="ViewModel\ViewModel.cs" />
     <Compile Include="View\RankingView.xaml.cs">
@@ -77,6 +78,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\MatchListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\RankingView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -85,6 +90,9 @@
   <ItemGroup>
     <Compile Include="View\MatchEditView.xaml.cs">
       <DependentUpon>MatchEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MatchListView.xaml.cs">
+      <DependentUpon>MatchListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

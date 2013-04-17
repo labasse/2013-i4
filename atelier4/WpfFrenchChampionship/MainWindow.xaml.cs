@@ -55,6 +55,7 @@ namespace WpfFrenchChampionship
             Ranking ranking = new Ranking(new FrenchLeague1PointSystem(), clubs.ToArray());
             
             this.matchEditView.DataContext = new ViewModel.MatchViewModel(clubs, ranking);
+            this.matchListView.DataContext = new ViewModel.MatchListViewModel(ranking);
             this.rankingView.DataContext = new ViewModel.RankingViewModel(ranking);
         }
     }
